@@ -69,7 +69,7 @@ $(document).ready(function () {
 	var remoteUser = '';
 	function callerSuccess(mediaStream) {
 		localStream = mediaStream;
-		localVideoElement.src = webkitURL.createObjectURL(mediaStream);
+		localVideoElement.src = mediaStream;
 		pc = new webkitRTCPeerConnection(pc_config, pc_constraints);
 		console.log('Peer connection created ' + pc);
 		pc.addStream(mediaStream);
